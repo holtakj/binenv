@@ -2986,13 +2986,16 @@ sources:
     description: >
       Rancher is an open source software platform that enables organizations to
       run and manage Docker and Kubernetes in production. (cli)
-    url: https://rancher.com/docs/rancher/v1.6/en/
+    url: https://github.com/rancher/cli/releases
+    map:
+      amd64: amd64
+      linux: linux
+      darwin: darwin
     list:
-      type: static
-      versions:
-        - 0.6.7
+      type: github-releases
+      url: https://github.com/rancher/cli/releases
     fetch:
-      url: https://releases.rancher.com/cli/v{{ .Version }}/rancher-{{ .OS }}-{{ .Arch }}-v{{ .Version }}.tar.gz
+      url: https://github.com/rancher/cli/releases/download/v{{ .Version }}/rancher-{{ .OS }}-{{ .Arch }}-v{{ .Version }}.tar.gz
     install:
       type: tgz
       binaries:
